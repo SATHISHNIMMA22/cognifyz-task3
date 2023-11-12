@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        overflow: hidden;
+      }
+      .image{
+        height:600px;
+        width:800px;
+        margin: 50px 0px 0px 350px;
+      }
+    </style>
+
+  </head>
+  <body style="background-color:cornsilk">
+      <img id="image" class="image" src="https://www.thestatesman.com/wp-content/uploads/2018/09/Rohit-Sharma-2.jpg">
+      <div style="margin-left: 700px;">
+        <button id="button" style="padding: 10px;border-radius: 10px;">slide></button>
+      </div>
+    <script>
+      let button=document.getElementById("button");
+      button.onclick=function(){
+        let image=document.getElementById("image");
+        image.src="https://2.bp.blogspot.com/-QI3QgunOVIA/VuafN0gC_BI/AAAAAAAAAoE/GaqHejWzXxo3mg5n_RiE3iM8Jmi_BGkWA/s1600/ravindra-jadeja-photo.jpg";
+        button.onclick=function(){
+          image.src="https://www.thestatesman.com/wp-content/uploads/2019/07/Mohammed-Shami.jpg";
+        }
+      }
+    </script>
+  </body>
+</html>
