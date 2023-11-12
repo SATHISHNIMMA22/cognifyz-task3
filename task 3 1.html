@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .Container{
+      display: flex;
+      flex-direction: row;
+      margin-left: 450px;
+    }
+    .cric{
+      display: none;
+    }
+    .main{
+      width: 500px;
+      height:400px;
+      margin-left: 250px;
+      
+    }
+    .Container img{
+      width: 200px;
+      height: 200px;
+    }
+
+ </style>
+
+</head>
+<body style="background-color:blanchedalmond">
+    <h1 style="text-align: center;">Created a image-gallery that will be increased its size when clicked</h1>
+  <div id="gallery" class="Container">
+    <div id="dhoni" style="border: 2px solid transparent;border-radius:10px;margin-right: 8px;" >
+      <img src="https://th.bing.com/th/id/R.99f6f14145c52caf6205fec58429d580?rik=37jIq%2bXECCpRsw&riu=http%3a%2f%2fim.rediff.com%2fcricket%2f2009%2fsep%2f29dhoni.jpg&ehk=5aePze2lz0EQR9fpp7%2b31kEXlkoRjuOyJjU0B9lU26Y%3d&risl=&pid=ImgRaw&r=0"></div>
+    <div id="kholi" style="border: 2px solid transparent;border-radius:10px;margin-right: 8px;" >
+      <img src="https://im.rediff.com/cricket/2023/jan/17kohli1.jpg" alt="Image 2">
+    </div>
+    <div id="bhuvi" style="border: 2px solid transparent;border-radius:10px;margin-right: 8px;">
+      <img src="https://www.dailypioneer.com/uploads/2020/story/images/big/like-dhoni--i-try-to-detach-myself-from-result---focus-on-process--bhuvi-2020-06-26.jpg" alt="Image 3">
+    </div>
+  </div>
+
+  <div class="main">
+    <div>
+      <img class="cric" id="main" src="" alt="">
+    </div>
+  </div>
+
+  <script>
+    let gallery = document.getElementById("gallery");
+    let dhoni = document.getElementById("dhoni");
+    let kholi = document.getElementById("kholi");
+    let bhuvi = document.getElementById("bhuvi");
+    let image=document.getElementById("main");
+    dhoni.onclick=function(){
+      gallery.classList.add("cric");
+      image.classList.remove("cric");
+      image.src="https://th.bing.com/th/id/R.99f6f14145c52caf6205fec58429d580?rik=37jIq%2bXECCpRsw&riu=http%3a%2f%2fim.rediff.com%2fcricket%2f2009%2fsep%2f29dhoni.jpg&ehk=5aePze2lz0EQR9fpp7%2b31kEXlkoRjuOyJjU0B9lU26Y%3d&risl=&pid=ImgRaw&r=0"
+      image.classList.add("main")
+      image.onclick=function(){
+        gallery.classList.remove("cric");
+        image.src="";
+        image.classList.add("cric");
+      }
+
+    }
+    kholi.onclick=function(){
+      gallery.classList.add("cric");
+      image.classList.remove("cric");
+      image.src="https://im.rediff.com/cricket/2023/jan/17kohli1.jpg";
+      image.classList.add("main")
+      
+      image.onclick=function(){
+        gallery.classList.remove("cric");
+        image.src="";
+        image.classList.add("cric");
+      }
+
+    }
+    bhuvi.onclick=function(){
+      gallery.classList.add("cric");
+      image.classList.remove("cric");
+      image.src="https://www.dailypioneer.com/uploads/2020/story/images/big/like-dhoni--i-try-to-detach-myself-from-result---focus-on-process--bhuvi-2020-06-26.jpg";
+      image.classList.add("main");
+      image.onclick=function(){
+        gallery.classList.remove("cric");
+        image.classList.add("cric");
+
+      }
+
+    }
+
+</script>
+</body>
+</html>
